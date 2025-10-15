@@ -1,0 +1,26 @@
+meta {
+  name: Insert
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/clients
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Yan",
+    "cpf": "078094921212",
+    "income": 50000,
+    "birthDate": "2028-02-19",
+    "children": 2
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

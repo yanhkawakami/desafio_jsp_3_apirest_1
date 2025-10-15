@@ -1,0 +1,26 @@
+meta {
+  name: InsertClient
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:8080/clients/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "João Silva",
+    "cpf": "078094921212",
+    "income": 50000,
+    "birthDate": "1992-02-12",
+    "children": 2
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
